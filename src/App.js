@@ -25,9 +25,13 @@ function App() {
     },
   ];
 
+  const newExpenseHandler = (newExpense) => {
+    console.log(newExpense, "app.jsss");
+  };
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense onNewExpense={newExpenseHandler} />
       <Expenses expenses={expenses} />
     </div>
   );
